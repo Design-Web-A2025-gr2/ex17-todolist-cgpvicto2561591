@@ -26,7 +26,7 @@ const tacheComplet = document.querySelector('.liste-fait');
 const iconeTrash = document.querySelector('.icone-trash');
 
 
-let li = document.createElement("li");
+//let li = document.createElement("li");  // ne pas créer son li ici sinon il va overwrite tout les li par le meme li
 let ulfirst = document.querySelector('.liste');
 let valeurtext;
 
@@ -34,8 +34,9 @@ let valeurtext;
 // function
 function getValue(){
     valeurtext = document.getElementById("saisie-tache").value;
-   
+   let li = document.createElement("li");  // créer son li ici pour en avoir un nouveau a chaque fois
     if(!valeurtext){
+        
         li = document.createElement("li");
         li.textContent = valeurtext;
     }
